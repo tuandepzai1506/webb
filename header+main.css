@@ -1,0 +1,290 @@
+@charset "utf-8";
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+header {
+    background-color: #eeedef;
+    color: #ffffff;
+    padding: 20px 200px;
+    /*text-align: center;*/
+    display: flex;
+    align-items: center;
+    /* 🔥 Căn giữa logo và chữ theo chiều dọc */
+    justify-content: space-between;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* khoảng cách giữa logo và slogan */
+}
+
+.slogan {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    /*margin-left: 1px;*/
+    color: rgb(148, 68, 115);
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.separator {
+    width: 1px;
+    height: 24px;
+    background-color: #ccc;
+}
+
+.login-btn {
+    color: #f29a9a;
+    padding: 6px 12px;
+    border: 1px solid #f29a9a;
+    border-radius: 20px;
+    transition: 0.3s;
+
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: #c91f1f;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    background: white;
+
+    overflow: hidden;
+}
+
+.search-form input[type="text"] {
+    border: 1px solid black;
+    padding: 10px;
+    outline: none;
+    width: 180px;
+    border-radius: 5px;
+}
+
+.search-form button {
+    color: rgb(224, 72, 72);
+    border: 1px solid black;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+nav {
+    background-color: #e9afcf;
+    font-family: 'Patrick Hand', cursive;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav>ul li {
+    list-style: none;
+}
+
+nav>ul li a {
+    padding: 0 25px;
+    display: block;
+    line-height: 50px;
+    color: #ffffff;
+    /*text-decoration: none;*/
+}
+
+nav a:visited {
+    color: #ffffff;
+}
+
+nav a:hover {
+    opacity: .7;
+    background: #ffffff;
+    color: #1A1A1A;
+}
+
+nav li ul {
+    display: none;
+    min-width: 350px;
+    position: absolute;
+    z-index: 100;
+}
+
+nav li>ul li {
+    width: 50%;
+    border: 1px solid #e77ca5;
+    border-bottom: 1px solid rgb(239, 150, 205)c;
+    background: #e77ca5;
+    text-align: left;
+    margin-left: 0;
+    border-radius: 2px;
+
+}
+
+nav li:hover>ul {
+    display: block;
+}
+
+section {
+    display: -webkit-flex;
+}
+
+#aside-left {
+    width: 200px;
+    flex-grow: 2;
+    margin-right: 8px;
+}
+
+article {
+    -webkit-flex: 3;
+}
+
+#aside-right {
+    width: 200px;
+    flex-grow: 2;
+    margin-top: 32px;
+}
+
+footer {
+    font-size: small;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #1A1A1A;
+    color: white;
+    padding: 8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.ti-heart-broken {
+    font-size: 52px;
+    color: rgb(214, 55, 159);
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main {
+    flex-grow: 6;
+    margin: 8px;
+    display: flex;
+    justify-content: flex-start;
+    width: 60%;
+}
+
+.main-content {
+    background-color: #f3c6e6;
+    width: 40%;
+    margin: 0 !important;
+    border: 1px solid #e77ca5;
+    border-radius: 15px;
+    position: relative;
+    max-height: 250px;
+}
+
+.main ul li {
+    list-style-type: none;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #8a6e81;
+    font-family: 'Patrick Hand', cursive;
+    border-bottom: 1px solid #302330;
+
+
+}
+
+.main-content>ul>li:hover {
+    opacity: .7;
+    background: #ffffff;
+    color: #1A1A1A;
+
+}
+
+.main ul li:last-child {
+    border-bottom: none !important;
+}
+
+.main li ul {
+    display: none;
+    min-width: 350px;
+    position: absolute;
+    background-color: #e77ca5;
+    border: 1px solid #e77ca5;
+    border-radius: 15px;
+    margin-left: 230px;
+    top: 0;
+    height: 250px;
+}
+
+.main li:hover>ul {
+    display: block;
+}
+
+.main li ul li {
+    color: #ffffff;
+    width: 90%;
+}
+
+.main-img {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide-img {
+    width: 20%;
+    height: auto;
+
+}
+
+.dot-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
