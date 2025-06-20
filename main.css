@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.background-header {
+    background-color: #fff;
+
+}
+
+.font-login {
+    color: black;
+}
+
+.bg-nav {
+    background-color: #283389;
+}
+
+.bg-nav a {
+    color: #fff;
+    font-family: Adelaide;
+
+}
+
+.bg-nav>ul>li>a {
+    text-transform: uppercase;
+    line-height: 40px;
+}
+
+.bg-nav>ul>li>ul>li>a {
+    color: #283389;
+}
