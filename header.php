@@ -25,7 +25,7 @@
     </header>
     <nav class="bg-nav" >
         <ul class="row list-unstyled text-center">
-            <li class="col text-decoration-none"><a class="text-decoration-none" href="#">Trang chủ</a></li>
+            <li class="col text-decoration-none"><a class="text-decoration-none" href="?page=home">Trang chủ</a></li>
             <li class="col text-decoration-none"><a class="text-decoration-none dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" href="#">Sản phẩm</a>
                 <ul class="list-unstyled dropdown-menu"> 
                     <li><a class="text-decoration-none dropdown-item" href="?page=camera">Camera</a></li>

@@ -13,7 +13,9 @@
 </head>
 
 <body>
-    <?php include_once("header.php");?>
+    <?php 
+        include_once("header.php");
+            ?>
     <?php 
         $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
@@ -25,37 +27,11 @@
             echo "<h2>Không tìm thấy trang</h2>";
         }
       ?>
-    <footer>
+    <hr/>
 
-        <div class="copyright">
-            <p>&copy; 2025 TECHSTORE</p>
-
-        </div>
-        <div class="footer-content">
-            <div class="footer-address">
-                <p><b><i>Địa chỉ: Hà Đông - Hà Nội</i></b></p>
-
-            </div>
-
-            <div class="footer-social">
-
-                <p>Theo dõi chúng tôi ở</p>
-                <ul>
-                    <li>
-                        <i class="ti-instagram"></i>
-                    </li>
-                    <li>
-                        <i class="ti-facebook"></i>
-                    </li>
-                    <li>
-                        <i class="ti-youtube"></i>
-                    </li>
-                </ul>
-
-            </div>
-
-        </div>
-    </footer>
+    <?php
+        include_once("footer.php");
+        ?>
 
     <script>
         let slideIndex = 0;
