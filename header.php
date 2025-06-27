@@ -28,10 +28,10 @@
             <li class="col text-decoration-none"><a class="text-decoration-none" href="?page=home">Trang chủ</a></li>
             <li class="col text-decoration-none"><a class="text-decoration-none dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" href="#">Sản phẩm</a>
                 <ul class="list-unstyled dropdown-menu"> 
-                    <li><a class="text-decoration-none dropdown-item" href="?page=camera">Camera</a></li>
-                    <li><a class="text-decoration-none dropdown-item" href="?page=monitor">Màn hình</a></li>
-                    <li><a class="text-decoration-none dropdown-item" href="?page=keyboard">Bàn phím</a></li>
-                    <li><a class="text-decoration-none dropdown-item" href="?page=mouse">Chuột</a></li>
+                    <li><a class="text-decoration-none dropdown-item" href="?page=sanpham&type=camera">Camera</a></li>
+                    <li><a class="text-decoration-none dropdown-item" href="?page=sanpham&type=monitor">Màn hình</a></li>
+                    <li><a class="text-decoration-none dropdown-item" href="?page=sanpham&type=keyboard">Bàn phím</a></li>
+                    <li><a class="text-decoration-none dropdown-item" href="?page=sanpham&type=mouse">Chuột</a></li>
                 </ul>
             </li>
             <li class="col text-decoration-none"><a class="text-decoration-none" href="#">Tin tức</a></li>

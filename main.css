@@ -31,3 +31,12 @@
 .bg-nav>ul>li>ul>li>a {
     color: #283389;
 }
+
+.buy-btn {
+    background-color: red;
+    padding-top: 12px;
+}
+
+.footer-main {
+    background-color: #283389;
+}

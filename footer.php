@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer-main">
 
         <div class="text-center">
             <p>&copy; 2025 TECHSTORE</p>
@@ -26,6 +26,6 @@
                 </ul>
 
             </div>
-
         </div>
+        
     </footer>

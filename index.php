@@ -19,7 +19,8 @@
     <?php 
         $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-        $arrayPages=['camera','monitor','mouse','keyboard','home'];
+        $arrayPages=['sanpham','home','product'];
+        $type = isset($_GET['type']) ? $_GET['type'] : null ;
 
         if(in_array($page,$arrayPages)){
             include_once("$page.php");
