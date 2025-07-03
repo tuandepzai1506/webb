@@ -23,12 +23,14 @@
                 if ($result->num_rows > 0) {
 
                     while ($row = $result->fetch_assoc()) {
+                        $cost = (int) $row['product_cost'];
+                        $formatted_cost = number_format($cost, 0, '', '.');
                         echo "
                             <div class='product' id='01' >
                                 <img src='image/{$row['product_img']}' class='card-img-top ' alt=''/>
                                 <h3 style='min-height:150px'>{$row['product_name']}</h3>
-                                <div class='price'>{$row['product_cost']} VNĐ</div>
-                                <button class='buy-btn'>Mua ngay</button>
+                                <div class='price'>{$formatted_cost} VNĐ</div>
+                                <a class='buy-btn text-decoration-none' href='?page=product&type={$row['product_type']}&name={$row['product_name']}'>Mua ngay</a>
                             </div>
                         ";
                     }
@@ -49,12 +51,14 @@
                 if ($result->num_rows > 0) {
 
                     while ($row = $result->fetch_assoc()) {
+                        $cost = (int) $row['product_cost'];
+                        $formatted_cost = number_format($cost, 0, '', '.');
                         echo "
                             <div class='product' id='01' >
                                 <img src='image/{$row['product_img']}' class='card-img-top ' alt=''/>
                                 <h3 style='min-height:150px'>{$row['product_name']}</h3>
-                                <div class='price'>{$row['product_cost']} VNĐ</div>
-                                <button class='buy-btn'>Mua ngay</button>
+                                <div class='price'>{$formatted_cost} VNĐ</div>
+                                <a class='buy-btn text-decoration-none' href='?page=product&type={$row['product_type']}&name={$row['product_name']}'>Mua ngay</a>
                             </div>
                         ";
                     }

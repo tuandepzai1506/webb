@@ -4,21 +4,23 @@
         </li>
         <?php
         $type = isset($_GET['type']) ? $_GET['type'] : null;
-        echo "<li class='breadcrumb-item active text-uppercase' aria-current='page'>{$type}</li>"
-
-            ?>
+        echo "<li class='breadcrumb-item active text-uppercase' aria-current='page'><a class ='text-decoration-none' href='?page=sanpham&type={$type}'>{$type}</a></li>";
+        $name = isset($_GET['name']) ? $_GET['name'] : null;
+        echo "<li class='breadcrumb-item active text-uppercase' aria-current='page'><a class ='text-decoration-none'>{$name}</a></li>";
+        ?>
     </ol>
 </div>
 <?php
 include 'connect.php';
-$id = isset($_GET['id']) ? $_GET['id'] : null;
+$name = isset($_GET['name']) ? $_GET['name'] : null;
 
-$sql = "SELECT * FROM product_detail WHERE product_id='$id'";
+$sql = "SELECT * FROM product_detail WHERE product_name = '$name'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-
     while ($row = $result->fetch_assoc()) {
+        $cost = (int) $row['product_cost'];
+        $formatted_cost = number_format($cost, 0, '', '.');
         echo "
            <div class='col d-flex justify-content-center '>
                 
@@ -29,7 +31,7 @@ if ($result->num_rows > 0) {
                     <div class='card-body'>
                         <p class='card-text fw-bold'style='min-height:50px'>{$row['product_name']}</p>
                         <p class='card-text fw-light'>{$row['product_description']}</p>
-                        <p class='card-text fw-bold text-danger'>{$row['product_cost']} VNĐ</p>
+                        <p class='card-text fw-bold text-danger'>{$formatted_cost} VNĐ</p>
                         <div class='input-group w-25'>
                             <button class=' btn btn-outline-secondary' type='button' onclick='changeQuantity(-1)'>-</button>
                             <input id='quantity' name='quantity' class='form-control text-center' value='1' min='1'>

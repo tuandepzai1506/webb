@@ -7,19 +7,19 @@
     </div>
     <div class="col-4 d-flex align-items-center row">
         <div class="col">
-            <form class="input-group mb-3" action="#" method="get">
-                <input class="form-control" type="text" name="q" placeholder="Tìm kiếm...">
-                <button class="input-group-text" for="">
+            <form class="input-group mb-3" action="" method="GET">
+                <input type="hidden" name="page" value="search">
+                <input class="form-control" type="text" name="filter" placeholder="Tìm kiếm...">
+                <button class="input-group-text" type="submit">
                     <i class="ti-search"></i>
                 </button>
             </form>
 
         </div>
         <?php
-        echo "<pre>";
-        print_r($_SESSION);
-        echo "</pre>";
-
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         if (!isset($_SESSION["username"]) || $_SESSION["username"] === "") {
             echo " 
             <div class='col d-flex align-items-center'>
@@ -30,10 +30,10 @@
             $username = $_SESSION["username"];
             echo "
             <div class='col d-flex align-items-center'>
-                <h5>$username</h5>
+                <p class='mb-3 fw-bold'>$username</p>
             </div>
-            <div class='col d-flex align-items-center'>
-                <a href='?logout=true' class='fw-bold text-decoration-none mb-3 font-login'>Đăng xuất</a>
+            <div class='logout col d-flex align-items-center'>
+                <a href='?logout=true' class=' mb-3  font-login'>Đăng xuất</a>
             </div>
             ";
         }
