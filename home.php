@@ -1,87 +1,93 @@
-<container id="container">
+<section>
 
-        <!--LEFT-->
-        <aside id="aside-left">
+    <!--LEFT-->
+    <aside id="aside-left">
+        <img src="Source 29-6/image/quang-cao/quang-cao-nim.png" alt="" width="250" height="350" usemap="#map1">
 
-            
-        </aside>
+        <map name="map1">
+            <area shape="rect" coords="0,0,250,350" href="https://en.gamesaien.com/game/fruit_box/" alt="">
+        </map>
+    </aside>
 
-        <!--CONTENT-->
-        <div class="main">
-            <div class="main-content">
-                <ul>
-                    <li>
-                        Camera
-                        <ul>
-                            <li><a href="#">Camera 360 độ</a></li>
-                            <li><a href="#">Camera siêu nét</a></li>
-                            <li><a href="#">Camera IP</a></li>
-                            <li><a href="#">Camera an ninh ngoài trời</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        Màn hình
-                        <ul>
-                            <li><a href="#">Màn hình IPS</a></li>
-                            <li><a href="#">Màn hình LCD</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        Bàn phím
-                        <ul>
-                            <li><a href="#">Bàn phím cơ</a></li>
-                            <li><a href="#">Bàn phím không dây</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        Chuột
-                        <ul>
-                            <li><a href="#">Chuột có dây</a></li>
-                            <li><a href="#">Chuột không dây</a></li>
-                        </ul>
-                    </li>
-                </ul>
+    <!--CONTENT-->
+    <article>
+        <div class="container-1">
+            <h2>Sản phẩm mới</h2>
+            <div class="products">
+                <?php
+                include 'connect.php';
+                $id = isset($_GET['id']) ? $_GET['id'] : null;
+
+                $sql = "SELECT * FROM product_detail limit 2";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+
+                    while ($row = $result->fetch_assoc()) {
+                        echo "
+                            <div class='product' id='01' >
+                                <img src='image/{$row['product_img']}' class='card-img-top ' alt=''/>
+                                <h3 style='min-height:150px'>{$row['product_name']}</h3>
+                                <div class='price'>{$row['product_cost']} VNĐ</div>
+                                <button class='buy-btn'>Mua ngay</button>
+                            </div>
+                        ";
+                    }
+                }
+                ?>
             </div>
-            <div class="main-img">
-                <img src="https://bizweb.dktcdn.net/thumb/grande/100/440/968/products/camera-ip-2mp-ban-cau-hikvision-ds-2cd1121-i-600x600-jpg-v-1700260549383-a6987aaf-436e-4f16-8def-d6f923abc517.jpg?v=1700451803027"
-                    alt="Camera IP 2MP" width="300" height="300">
-                <img src="https://bizweb.dktcdn.net/thumb/grande/100/082/878/products/86921-man-hinh-lenovo-l27i-4a-3.jpg?v=1730435393250"
-                    alt="IPS screen" width="300" height="300">
-                <img src="https://product.hstatic.net/200000722513/product/1_e85e939e505342d8ace6c99cf9c7ec95_d13fcc785323458da54fd28dace814dc_grande.jpg"
-                    alt="Keyboard" width="300" height="300">
-                <img src="https://bizweb.dktcdn.net/thumb/grande/100/534/572/products/mchose-a7-white-website-1.png?v=1733222434193"
-                    alt="Mouse" width="300" height="300">
+        </div>
+
+        <div class="container-2">
+            <h2>Sản phẩm nổi bật</h2>
+            <div class="products">
+                <?php
+                include 'connect.php';
+                $id = isset($_GET['id']) ? $_GET['id'] : null;
+
+                $sql = "SELECT * FROM product_detail limit 2 offset 2";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+
+                    while ($row = $result->fetch_assoc()) {
+                        echo "
+                            <div class='product' id='01' >
+                                <img src='image/{$row['product_img']}' class='card-img-top ' alt=''/>
+                                <h3 style='min-height:150px'>{$row['product_name']}</h3>
+                                <div class='price'>{$row['product_cost']} VNĐ</div>
+                                <button class='buy-btn'>Mua ngay</button>
+                            </div>
+                        ";
+                    }
+                }
+                ?>
+    </article>
+    <!--RIGHT-->
+    <aside id="aside-right">
+        <div class="slideshow-container">
+            <p>🔥HOT🔥</p>
+
+            <div class="slide">
+                <img class="slide-img"
+                    src="https://bizweb.dktcdn.net/thumb/grande/100/534/572/products/mchose-a7-white-website-1.png?v=1733222434193"
+                    width="250" height="auto" />
             </div>
 
-        </div>
-
-
-        <!--RIGHT-->
-        <aside id="aside-right">
-
-            <div>
-                
+            <div class="slide">
+                <img class="slide-img"
+                    src="https://product.hstatic.net/200000722513/product/1_e85e939e505342d8ace6c99cf9c7ec95_d13fcc785323458da54fd28dace814dc_grande.jpg"
+                    width="250" height="auto" />
             </div>
-        </aside>
 
-    </container>
-    <div class="slideshow-container">
-        <div class="slide">
-            <img class="slide-img"
-                src="https://bizweb.dktcdn.net/thumb/grande/100/534/572/products/mchose-a7-white-website-1.png?v=1733222434193" />
+            <div class="slide">
+                <img class="slide-img"
+                    src="https://bizweb.dktcdn.net/thumb/grande/100/082/878/products/86921-man-hinh-lenovo-l27i-4a-3.jpg?v=1730435393250"
+                    width="250" height="auto" />
+            </div>
+            <div class="dot-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
-        <div class="slide">
-            <img class="slide-img"
-                src="https://product.hstatic.net/200000722513/product/1_e85e939e505342d8ace6c99cf9c7ec95_d13fcc785323458da54fd28dace814dc_grande.jpg" />
-        </div>
-        <div class="slide">
-            <img class="slide-img"
-                src="https://bizweb.dktcdn.net/thumb/grande/100/082/878/products/86921-man-hinh-lenovo-l27i-4a-3.jpg?v=1730435393250" />
-        </div>
-        <div class="dot-container">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-
-    </div>
+    </aside>
+</section>

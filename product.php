@@ -1,13 +1,24 @@
-<?php
-    include 'connect.php';
-    $id = isset($_GET['id']) ? $_GET['id'] : null ;
+<div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb ms-5">
+        <li class="breadcrumb-item"><i class="ti-home"></i><a class="text-decoration-none" href="?page=home"> Home</a>
+        </li>
+        <?php
+        $type = isset($_GET['type']) ? $_GET['type'] : null;
+        echo "<li class='breadcrumb-item active text-uppercase' aria-current='page'>{$type}</li>"
 
-       $sql= "SELECT * FROM product_detail WHERE product_id='$id'";
-       $result = $conn->query($sql);
-       
-       if ($result->num_rows > 0) {
-        
-         while($row = $result->fetch_assoc()) {
+            ?>
+    </ol>
+</div>
+<?php
+include 'connect.php';
+$id = isset($_GET['id']) ? $_GET['id'] : null;
+
+$sql = "SELECT * FROM product_detail WHERE product_id='$id'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+
+    while ($row = $result->fetch_assoc()) {
         echo "
            <div class='col d-flex justify-content-center '>
                 
@@ -33,14 +44,29 @@
                                 input.value = value;
                                 }
                             </script>
-                            <a class='btn btn-primary bg-danger' role='button' href='#'>
-                                  Mua ngay    
-                            </a>
+                            <button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#buyId'>
+                                Mua ngay
+                            </button>
+                            <div class='modal fade' id=buyId>
+                                <div class='modal-dialog'>
+                                <div class='modal-content'>
+                                   <div class='modal-header'>
+                                        <h5 class='modal-title'>THÔNG BÁO</h5>
+                                   </div>
+                                   <div class='modal-body'>
+                                        Mua hàng thành công
+                                   </div>
+                                   <div class='modal-footer'>
+                                        <button type='button' class='btn btn-danger' data-bs-dismiss='modal'>Close</button>
+                                   </div>
+                                </div>
+                                </div>
+                            </div>
                     </div>
                   </div>
                    
               </div>
                  ";
-         }
-        }
-       ?>
+    }
+}
+?>

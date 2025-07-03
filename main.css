@@ -39,4 +39,270 @@
 
 .footer-main {
     background-color: #283389;
+    color: #fff;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.separator {
+    /*Cái bên cạnh nút đăng kí*/
+    width: 1px;
+    height: 24px;
+    background-color: #ccc;
+}
+
+nav {
+    background-color: #283389;
+    /*margin: 5px 10%;*/
+    font-weight: bold;
+}
+
+
+section {
+    display: -webkit-flex;
+}
+
+.separator-hori {
+    /*Cái bên cạnh nút đăng kí*/
+    width: 50px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    justify-content: center;
+    padding: 80px;
+}
+
+.container {
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ccc;
+    padding: 20px;
+}
+
+.container form {
+    background: #ffffff;
+    max-width: 400px;
+    margin: auto;
+}
+
+.container input {
+    width: 94%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #e1e3e5;
+}
+
+.container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    color: black;
+    border: 1px solid #e1e3e5;
+    border-radius: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+    text-align: center;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.separator {
+    /*Cái bên cạnh nút đăng kí*/
+    width: 1px;
+    height: 24px;
+    background-color: #ccc;
+}
+
+.search-form input[type="text"] {
+    border: none;
+    padding: 8px;
+    outline: none;
+    width: 180px;
+}
+
+.search-form button {
+    background-color: white;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+section {
+    display: -webkit-flex;
+}
+
+#aside-left {
+    -webkit-flex: 1;
+    justify-content: center;
+    display: flex;
+    padding: 30px 0px;
+}
+
+article {
+    -webkit-flex: 3;
+}
+
+#aside-right {
+    -webkit-flex: 1;
+    justify-content: center;
+    /*display: flex;*/
+    padding: 30px 0px;
+}
+
+.separator-hori {
+    /*Cái bên cạnh nút đăng kí*/
+    width: 50px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-1,
+.container-2,
+.container-3 {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0000001a;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product h3 {
+    margin: 10px 0 5px;
+}
+
+.price {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.buy-btn {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background-color: #944473;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    color: #d93737;
+    font-weight: bold;
+    text-align: center;
+}
+
+.slide {
+    display: none;
+}
+
+.dot-container {
+    margin-top: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
