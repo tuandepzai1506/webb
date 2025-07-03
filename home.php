@@ -2,7 +2,7 @@
 
     <!--LEFT-->
     <aside id="aside-left">
-        <img src="Source 29-6/image/quang-cao/quang-cao-nim.png" alt="" width="250" height="350" usemap="#map1">
+        <img src="image/quang-cao-nim.png" alt="" width="250" height="350" usemap="#map1">
 
         <map name="map1">
             <area shape="rect" coords="0,0,250,350" href="https://en.gamesaien.com/game/fruit_box/" alt="">
