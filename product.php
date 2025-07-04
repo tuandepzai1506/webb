@@ -46,24 +46,10 @@ if ($result->num_rows > 0) {
                                 input.value = value;
                                 }
                             </script>
-                            <button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#buyId'>
+                            <a type='submit' class='btn btn-danger'  href='?page=buy&id={$row['product_id']}'>
                                 Mua ngay
-                            </button>
-                            <div class='modal fade' id=buyId>
-                                <div class='modal-dialog'>
-                                <div class='modal-content'>
-                                   <div class='modal-header'>
-                                        <h5 class='modal-title'>THÔNG BÁO</h5>
-                                   </div>
-                                   <div class='modal-body'>
-                                        Mua hàng thành công
-                                   </div>
-                                   <div class='modal-footer'>
-                                        <button type='button' class='btn btn-danger' data-bs-dismiss='modal'>Close</button>
-                                   </div>
-                                </div>
-                                </div>
-                            </div>
+                            </a>
+                            
                     </div>
                   </div>
                    

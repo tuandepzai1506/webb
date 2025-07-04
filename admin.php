@@ -121,5 +121,8 @@
     }
     $conn->close();
     ?>
+    <div>
+        <h5 class="modal-title" id="insertModalLabel">Đơn hàng</h5>
+    </div>
 
 </section>

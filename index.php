@@ -25,7 +25,7 @@
 
     $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-    $arrayPages = ['sanpham', 'home', 'product', 'login', 'sign-up', 'admin', 'delete', 'search'];
+    $arrayPages = ['sanpham', 'home', 'product', 'login', 'sign-up', 'admin', 'delete', 'search', 'buy'];
     $type = isset($_GET['type']) ? $_GET['type'] : null;
 
     if (in_array($page, $arrayPages)) {
