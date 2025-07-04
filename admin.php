@@ -2,7 +2,11 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal">
         Thêm sản phẩm
     </button>
-
+</div>
+<div class='position-absolute ms-5'>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModalOrder">
+        Đơn hàng
+    </button>
 </div>
 <section>
     <?php
@@ -44,6 +48,57 @@
     }
     $conn->close();
     ?>
+    <?php
+    include 'connect.php';
+    $order_table = "";
+    $sql = "SELECT * FROM product_order";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        $order_table .= "
+    <table class='table'>
+        <thead class='thead-dark'>
+            <tr>
+                <th scope='col'>#</th>
+                <th scope='col'>Mã sản phẩm</th>
+                <th scope='col'>Tên người mua</th>
+                <th scope='col'>Số điện thoại</th>
+                <th scope='col'>Địa chỉ</th>
+            </tr>
+        </thead>
+        <tbody>";
+        while ($row = $result->fetch_assoc()) {
+            $order_table .= "
+            <tr>
+                <th scope='row'>{$row['order_id']}</th>
+                <td>{$row['order_idProduct']}</td>
+                <td>{$row['order_name']}</td>
+                <td>{$row['order_number']}</td>
+                <td>{$row['order_address']}</td>
+            </tr>";
+        }
+        $order_table .= "</tbody></table>";
+    } else {
+        $order_table = "<p>Không có đơn hàng nào.</p>";
+    }
+    $conn->close();
+    ?>
+    <div class="modal fade" id="insertModalOrder" tabindex="-1" aria-labelledby="insertModalOrderLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="insertModalOrderLabel">Danh sách đơn hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body">
+                    <?php echo $order_table; ?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="insertModal" tabindex="-1" aria-labelledby="insertModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <form method="POST" action="" enctype="multipart/form-data">
@@ -121,8 +176,7 @@
     }
     $conn->close();
     ?>
-    <div>
-        <h5 class="modal-title" id="insertModalLabel">Đơn hàng</h5>
     </div>
+
 
 </section>

@@ -1,11 +1,12 @@
 <?php
 include 'connect.php';
+$order_idProduct = isset($_GET['id']) ? ($_GET['id']) : 0;
 if (isset($_POST['insert'])) {
     $name = $_POST['Name'];
     $number = $_POST['Number'];
     $address = $_POST['Address'];
-    $stmt = $conn->prepare("INSERT INTO product_order (order_name, order_number, order_address) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("sss", $name, $number, $address);  // s: string, i: integer
+    $stmt = $conn->prepare("INSERT INTO product_order (order_idProduct, order_name, order_number, order_address) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("isss", $order_idProduct, $name, $number, $address);  // s: string, i: integer
     $stmt->execute();
     if ($stmt->affected_rows > 0) {
         echo "<script>alert('Mua hàng thành công'); window.location.href='';</script>";
@@ -13,9 +14,8 @@ if (isset($_POST['insert'])) {
         echo "<script>alert('Có lỗi xảy ra vui lòng thử lại');</script>";
     }
     $stmt->close();
-} else {
-    echo "<script>alert('Lỗi.');</script>";
 }
+
 
 
 $conn->close();
