@@ -19,6 +19,7 @@
     $sql = "SELECT * FROM product_detail";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
+
         echo "
         <table class='table'>
         <thead>
@@ -30,12 +31,14 @@
             </tr>
         </thead> ";
         while ($row = $result->fetch_assoc()) {
+            $cost = (int) $row['product_cost'];
+            $formatted_cost = number_format($cost, 0, '', '.');
             echo "     
         <tbody>
             <tr>
                 <th scope='row'>{$row['product_id']}</th>
                 <td>{$row['product_name']}</td>
-                <td>{$row['product_cost']}</td>
+                <td>{$formatted_cost} VNĐ</td>
                 <td class='btn-danger'><a href='?page=delete&id={$row['product_id']}' onclick='return confirm(\"Bạn có chắc muốn xóa không?\")'><i class = 'ti-trash'></i></a></td>
             </tr>
             

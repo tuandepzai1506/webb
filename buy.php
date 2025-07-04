@@ -40,7 +40,7 @@ $conn->close();
                             <label for="exampleInputAddress1">Địa chỉ</label>
                             <input name="Address" type="text" class="form-control" placeholder="Địa chỉ">
                         </div>
-                        <button type="submit" name="insert" class="btn btn-danger">Mua ngay</button>
+                        <button type="submit" name="insert" class="btn bh">Mua ngay</button>
                     </form>
 
                 </div>

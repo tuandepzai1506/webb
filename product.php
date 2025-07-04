@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
            <div class='col d-flex justify-content-center '>
                 
                   <div class = 'card' style='width: 70%  min-width:450px'>
-                    <div class='image-card' style='min-height:460px'>
+                    <div class='image-card' style='min-height:350px'>
                         <img src='image/{$row['product_img']}' class='card-img-top ' alt=''/>
                     </div>
                     <div class='card-body'>

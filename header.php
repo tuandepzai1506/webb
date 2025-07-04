@@ -1,13 +1,16 @@
 <header class="row background-header">
 
-    <div class="col-8">
+    <div class="col-7">
         <a href="?page=home">
             <img src="image/logo-h.png" class="ms-2" style="width:180px" />
         </a>
     </div>
-    <div class="col-4 d-flex align-items-center row">
+    <div class="col-5 d-flex align-items-center row">
         <div class="col">
             <form class="input-group mb-3" action="" method="GET">
+                <a class="cart-header w-25" href="./cart.php">
+                    <i class="ti-shopping-cart"></i>
+                </a>
                 <input type="hidden" name="page" value="search">
                 <input class="form-control" type="text" name="filter" placeholder="Tìm kiếm...">
                 <button class="input-group-text" type="submit">
